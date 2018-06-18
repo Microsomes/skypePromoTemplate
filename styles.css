@@ -1,0 +1,92 @@
+/*css reset*/
+body{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    padding:10px;
+    font-size: 10em;
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color:#777;
+}
+.header img{
+    height:10%;
+}
+.header{
+    position: relative;
+    height: 90vh;
+    background: lightblue;
+    clip-path: polygon(0 0,100% 0 , 100% 50% , 0 100%);
+    background:linear-gradient(rgba(0, 172, 240, 0.911),rgba(255, 192, 203, 0.897));
+}
+.image_box{
+    position: absolute;
+    top:40px;
+    left:40px;
+    font-size:30px;
+    color:white;
+    letter-spacing: 4px;
+    text-transform: none;
+    cursor: pointer;
+}
+
+.header_primary{
+    letter-spacing: 80px;
+    font-weight: 400;
+    font-size: 60px;
+    display: block;
+    text-align: center;
+    color:white;
+}
+.header_sub{
+    display: block;
+    letter-spacing: 10px;
+    font-weight: 400;
+    color: white;
+}
+.text_box{
+    top:40%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+    backface-visibility: hidden;
+}
+.btn:link,btn:visited{
+     border-radius: 100px;
+     padding: 15px 40px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+     text-transform: uppercase;
+     position: relative;
+
+}
+.btn_blue{
+    background: rgba(1, 176, 240, 0.5);
+    color:white;
+ }
+
+.btn_animated:after{
+    content: '';
+    position: absolute;
+    top:0px;
+    left:0px;
+    border-radius: 100px;
+    display: inline-block;
+   text-align: center;
+   text-decoration: none;
+    text-transform: uppercase;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+      transition: all .5s;
+ }
+ .btn_animated:hover::after{
+     transform: scale(1.5);
+     z-index: 1;
+     background: rgba(0, 0, 0, 0.733);
+     opacity: 0;
+ }
